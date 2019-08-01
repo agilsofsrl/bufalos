@@ -7416,7 +7416,10 @@ h1, h2, h3, h4, h5,
 .navbar-brand {
   text-transform: uppercase;
   letter-spacing: .1em; }
-
+.navbar-brand img { 
+  width: 70px;
+  height: 68px;
+ }
 .bg-image, .ftco-cover {
   background-size: cover;
   background-repeat: no-repeat; }
