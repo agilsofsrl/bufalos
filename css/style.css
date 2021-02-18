@@ -9261,11 +9261,11 @@ textarea.form-control {
   transform: translate3d(10%, 0, 0);
 }
 
-.video-gallery .gallery-item:hover img {
+/* .video-gallery .gallery-item:hover img {
   opacity: .3;
   transform: translate3d(0, 0, 0);
 
-}
+} */
 
 .video-gallery .gallery-item .gallery-item-caption {
   text-align: left;
@@ -9302,4 +9302,21 @@ textarea.form-control {
   }
 }
 
+.image-play-galery {
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    bottom: 0;
+    left: 53%;
+    position: absolute;
+    right: 0;
+    top: 47%;
+    transition: background-color 0.15s ease 0s;
+}
+
+.image-play-galery img{
+  height: 60px !important;
+  margin-left: -24px;
+  margin-top: -24px;
+  opacity: 0.8;
+  width: 60px !important;
+}
    
