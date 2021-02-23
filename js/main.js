@@ -266,7 +266,63 @@ $(document).ready(function($) {
 	  'autoclose': true
 	});
 
+	
 
 
+
+});
+
+// function sendEmail() {
+   
+// 	Email.send({
+// 		// SecureToken : "497b2da0-1915-4d30-a35e-94c20e37bb43",
+// 		Host : "smtp.gmail.com",
+// 		Username : "josedanielf9@gmail.com",
+// 		Password : "123Daniel@",
+// 		To : 'agilsof.srl@gmail.com',
+// 		From : "josedanielf9@gmail.com",
+// 		Subject : "dfdfdf",
+// 		Body : "miauuuuuu",
+// 	})
+// 	.then(function(message){
+// 		alert("mail sent successfully")
+// 	});
+// }
+//  para enviar mensajes
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Enviando...';
+
+   const serviceID = 'service_lt0nfys';
+   const templateID = 'template_4fyytud';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Enviar mensaje';
+	//   alert('Sent!');
+	Swal.fire({
+		title: 'Tu mensaje fue enviado!',
+		text: 'Muchas gracias por escribirnos, nos contactaremos contigo :)',
+		icon: 'success'
+	 });
+	 
+	 document.getElementById('to_name').value = '';
+	 document.getElementById('from_name').value = '';
+	 document.getElementById('titulomsg').value = '';
+	 document.getElementById('message').value = '';
+
+    }, (err) => {
+	  btn.value = 'Enviar mensaje';
+	  Swal.fire({
+		title: 'El correo no se pudo enviar!',
+		text: JSON.stringify(err),
+		icon: 'warning'
+	 });
+  
+    });
 });
 
