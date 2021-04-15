@@ -8703,7 +8703,7 @@ textarea.form-control {
     position: relative;
     display: inline-block;
     font-weight: 300; }
-    .block-30 .subheading-sm:after {
+    /* .block-30 .subheading-sm:after {
       width: 80px;
       height: 2px;
       background: #fff;
@@ -8713,7 +8713,7 @@ textarea.form-control {
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
-      content: ""; }
+      content: ""; } */
   .block-30 .heading {
     color: #fff;
     font-size: 30px;
@@ -9339,4 +9339,14 @@ textarea.form-control {
   left: 0;
   width: 100%;
   height: 100%;
+}
+.icon-horse{
+  filter: invert(56%) sepia(82%) saturate(4625%) hue-rotate(334deg) brightness(94%) contrast(111%);
+}
+.servicios-link{
+  color: #212529 !important;
+}
+.servicios-link:hover {
+  /* border: 2px solid whitesmoke; */
+  background: whitesmoke;
 }
